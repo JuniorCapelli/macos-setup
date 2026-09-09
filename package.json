@@ -1,0 +1,30 @@
+{
+  "name": "eiskaffee-setup",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal macOS development environment bootstrap (Homebrew, pnpm/Node, Colima, VS Code, Zsh).",
+  "scripts": {
+    "bootstrap": "bash os/scripts/bootstrap.sh",
+    "bootstrap:dry-run": "bash os/scripts/bootstrap.sh --dry-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuniorCapelli/macos-setup.git"
+  },
+  "keywords": [
+    "macos",
+    "bootstrap",
+    "dotfiles",
+    "homebrew",
+    "pnpm",
+    "colima",
+    "zsh",
+    "setup"
+  ],
+  "author": "JuniorCapelli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JuniorCapelli/macos-setup/issues"
+  },
+  "homepage": "https://github.com/JuniorCapelli/macos-setup#readme"
+}

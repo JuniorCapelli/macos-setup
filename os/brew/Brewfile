@@ -1,0 +1,37 @@
+# =============================================================================
+# Brewfile — dev-machine-setup (Linux/macOS agnostic)
+# Usage: brew bundle --file=os/brew/Brewfile
+# Regenerate: brew bundle dump --file=os/brew/Brewfile --force --describe
+# =============================================================================
+
+# --- Default taps (no need to declare homebrew/core and cask on brew >= 4) ---
+
+# --- CLIs and command-line tools ------------------------------------------------
+brew "act"             # Run GitHub Actions locally
+brew "cloudflared"     # Cloudflare Tunnel client
+brew "colima"          # Container runtime (Docker/Kubernetes) without Docker Desktop
+brew "direnv"          # Loads env vars per directory (.envrc)
+brew "docker"          # Docker CLI (talks to the Colima daemon)
+brew "docker-compose"  # Compose plugin for the docker CLI
+brew "ffmpeg"          # Audio/video (codecs)
+brew "fswatch"         # Watches directories and triggers commands
+brew "gh"              # GitHub CLI (also used as the git credential helper)
+brew "git"             # Git (Homebrew version, kept up to date)
+brew "kubernetes-cli"  # kubectl
+brew "lcov"            # Test coverage (gcov front-end)
+brew "marp-cli"        # Markdown -> slides (HTML/PDF/PPT)
+brew "mkcert"          # Locally trusted development certificates
+brew "neovim"          # Editor
+brew "rtk"             # CLI proxy to reduce LLM token usage
+brew "tree"            # Directory tree
+
+# --- Casks (GUI apps / installers) ---------------------------------------------
+cask "copilot-cli"  # GitHub Copilot in the terminal
+
+# =============================================================================
+# NOT managed by Brew (installed by other tools — see README):
+#   - pnpm / Node.js  -> pnpm standalone installer; Node managed via `pnpm env` (see scripts/40-node.sh)
+#   - Ghostty         -> formula on Linux / cask on macOS (see scripts/70-ghostty.sh)
+#   - Docker daemon   -> provided by Colima (`colima start`); the `docker` formula above is only the CLI
+#   - Android Studio / Tizen Studio / webOS -> manual install (see docs/)
+# =============================================================================
