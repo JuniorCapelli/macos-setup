@@ -1,5 +1,9 @@
-# Local machine files (never commit)
-.oh-my-zsh/
+# Local machine files (never commit), except the versioned
+# eiskaffee theme/plugin sources under .oh-my-zsh/ (see os/scripts/80-zsh-plugins.sh)
+.oh-my-zsh/*
+!.oh-my-zsh/eiskaffee.zsh-theme
+!.oh-my-zsh/zsh-brew-node-guard
+!.oh-my-zsh/zsh-brew-node-guard/*.plugin.zsh
 .zshrc
 .certs/
 
